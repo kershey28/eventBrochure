@@ -1,0 +1,13 @@
+@use '../../styles/utilities/flow';
+
+.paragraph {
+  margin-bottom: flow.$margin-md;
+}
+
+.accentText {
+  color: var(--clr-tertiary-500);
+}
+
+.list {
+  margin-block: flow.$margin-md;
+}

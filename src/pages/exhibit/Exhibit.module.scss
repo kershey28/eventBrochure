@@ -1,0 +1,7 @@
+@use '../../styles/utilities/flow';
+
+.title {
+  text-align: center;
+  color: var(--clr-neutral-400);
+  margin-bottom: flow.$margin-md;
+}

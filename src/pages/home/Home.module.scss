@@ -1,0 +1,14 @@
+@use '../../styles/utilities/flow';
+@use '../../styles/abstracts/breakpoints';
+
+.quantity {
+  margin-block: flow.$margin-kg;
+
+  @include breakpoints.respond(tab-port) {
+    margin-top: flow.$margin-md;
+  }
+
+  @include breakpoints.respond(phone-reg) {
+    margin-bottom: flow.$margin-hg;
+  }
+}

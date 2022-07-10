@@ -1,0 +1,13 @@
+@use '../../styles/abstracts/breakpoints';
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem 3rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include breakpoints.respond(phone-reg) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,11 @@
+.paragraph {
+  margin-bottom: 5rem;
+}
+
+.accentText {
+  color: var(--clr-tertiary-500);
+}
+
+.list {
+  margin-block: 5rem;
+}/*# sourceMappingURL=About.module.css.map */

@@ -1,0 +1,14 @@
+@use '../../styles/abstracts/breakpoints';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  @include breakpoints.respond(phone-reg) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}

@@ -1,0 +1,29 @@
+@use '../../styles/abstracts/breakpoints';
+
+@mixin icon($type) {
+  height: 2rem;
+  width: 2rem;
+
+  @include breakpoints.respond(phone-reg) {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  @if $type == neutral {
+    fill: var(--clr-neutral-500);
+  }
+
+  @if $type == secondary {
+    fill: var(--clr-secondary-500);
+  }
+
+  @content;
+}
+
+.iconNeutral {
+  @include icon(neutral);
+}
+
+.iconSecondary {
+  @include icon(secondary);
+}

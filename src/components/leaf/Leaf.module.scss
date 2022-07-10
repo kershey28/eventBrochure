@@ -1,0 +1,32 @@
+@use './../../styles/utilities/flow';
+@use './../../styles/abstracts/variables';
+
+.container {
+  //layout
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  // styling
+  padding: flow.$padding-sm;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  max-width: 28rem;
+  box-shadow: variables.$shadow-nuemorphic-pressed-3;
+}
+
+.quantity {
+  display: inline;
+  color: var(--clr-neutral-500);
+  font-weight: 900;
+}
+
+.icon {
+  transform: translateY(0.3rem);
+}
+
+.noun {
+  text-transform: uppercase;
+}

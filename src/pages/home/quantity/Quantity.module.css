@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+@media only screen and (max-width: 75em) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=Quantity.module.css.map */

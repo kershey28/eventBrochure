@@ -1,0 +1,141 @@
+@use '../../styles/abstracts/variables';
+
+@mixin btn-regular($type) {
+  & {
+    //sizing
+    width: max-content;
+
+    //typography
+    text-decoration: none;
+    font-family: inherit;
+    font-size: var(--fs-label);
+    text-shadow: variables.$text-shadow;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    //styling
+    border-radius: 15px;
+    border: none;
+    transition: all 0.2s;
+
+    //default
+    appearance: none;
+    cursor: pointer;
+
+    //layout
+    display: inline-block;
+    position: relative;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @if $type == primary {
+    padding: 1.5rem 3rem;
+    background-color: var(--clr-secondary-300);
+    color: var(--clr-neutral-100);
+    box-shadow: variables.$shadow-nuemorphic-bump-1;
+    animation: buttonCta 2s backwards ease-out;
+
+    &:hover,
+    &:focus {
+      background-color: var(--clr-secondary-500);
+      box-shadow: variables.$shadow-nuemorphic-bump-2;
+    }
+
+    &:active {
+      box-shadow: variables.$shadow-nuemorphic-pressed-1;
+    }
+  }
+
+  @if $type == ghost {
+    padding: 1.5rem 3rem;
+    color: var(--clr-secondary-300);
+    box-shadow: variables.$shadow-nuemorphic-pressed-1;
+    animation: buttonGhost 2s backwards ease-out;
+
+    &:hover,
+    &:focus {
+      box-shadow: variables.$shadow-nuemorphic-pressed-2;
+    }
+
+    &:active {
+      box-shadow: variables.$shadow-nuemorphic-pressed-3;
+    }
+  }
+
+  @if $type == txt {
+    background: none;
+    padding: 3px;
+    color: var(--clr-ash-500);
+    border-bottom: 1px solid var(--clr-shadow-300);
+
+    &:hover,
+    &:focus {
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  @content;
+}
+
+.btnCTA {
+  @include btn-regular(primary);
+}
+
+.btnGhost {
+  @include btn-regular(ghost);
+}
+
+.btnText {
+  @include btn-regular(txt);
+}
+
+//buttons
+@keyframes buttonCta {
+  0% {
+    box-shadow: none;
+    color: var(--clr-secondary-300);
+  }
+
+  70% {
+    box-shadow: none;
+  }
+
+  80% {
+    box-shadow: none;
+    color: var(--clr-secondary-300);
+  }
+
+  100% {
+    box-shadow: variables.$shadow-nuemorphic-bump-1;
+    color: var(--clr-neutral-100);
+  }
+}
+
+@keyframes buttonGhost {
+  0% {
+    box-shadow: none;
+    color: var(--clr-shadow-300);
+  }
+
+  70% {
+    box-shadow: none;
+  }
+
+  80% {
+    box-shadow: none;
+    color: var(--clr-shadow-300);
+  }
+
+  100% {
+    box-shadow: variables.$shadow-nuemorphic-pressed-1;
+    color: var(--clr-secondary-300);
+  }
+}

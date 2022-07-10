@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  max-width: 28rem;
+  box-shadow: inset 4px 4px 13px var(--clr-shadow-300), inset -13px -13px 26px #fff;
+}
+
+.quantity {
+  display: inline;
+  color: var(--clr-neutral-500);
+  font-weight: 900;
+}
+
+.icon {
+  transform: translateY(0.3rem);
+}
+
+.noun {
+  text-transform: uppercase;
+}/*# sourceMappingURL=Leaf.module.css.map */

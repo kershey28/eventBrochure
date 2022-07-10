@@ -1,0 +1,13 @@
+.quantity {
+  margin-block: 20rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .quantity {
+    margin-top: 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .quantity {
+    margin-bottom: 15rem;
+  }
+}/*# sourceMappingURL=Home.module.css.map */

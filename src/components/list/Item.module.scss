@@ -1,0 +1,29 @@
+@use '../../styles/abstracts/variables';
+@use '../../styles/utilities/flow';
+
+.container {
+  list-style: none;
+  box-shadow: variables.$shadow-nuemorphic-bump-2;
+  padding: flow.$padding-mn flow.$padding-sm;
+  margin-bottom: flow.$margin-sm;
+  border-radius: 10px;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.listNumber {
+  padding: flow.$padding-mn;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: variables.$shadow-nuemorphic-pressed-3;
+  color: var(--clr-secondary-500);
+}
+
+.listText {
+  font-size: var(--fs-label);
+  color: var(--clr-neutral-600);
+}

@@ -1,0 +1,39 @@
+@use '../../styles/abstracts/variables';
+@use '../../styles/utilities/flow';
+@use '../../styles/abstracts/breakpoints';
+
+.container {
+  //layout
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: flow.$padding-md;
+  overflow: hidden;
+
+  @include breakpoints.respond(phone-reg) {
+    padding: flow.$padding-md flow.$padding-mn;
+  }
+}
+
+.content {
+  //styling
+  border-radius: 10px;
+  background-color: var(--clr-primary-300);
+  box-shadow: variables.$shadow-nuemorphic-pressed-3;
+
+  //layout
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  //sizing
+  width: 90vw;
+  padding: flow.$padding-md;
+  margin-top: flow.$margin-sm;
+
+  @include breakpoints.respond(phone-reg) {
+    padding: flow.$padding-md flow.$padding-mn;
+  }
+}

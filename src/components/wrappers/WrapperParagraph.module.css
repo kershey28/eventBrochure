@@ -1,0 +1,5 @@
+.container {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px var(--clr-shadow-300);
+  padding: 1.5rem 3rem;
+  border-radius: 10px;
+}/*# sourceMappingURL=WrapperParagraph.module.css.map */

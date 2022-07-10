@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  gap: 5rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .container {
+    justify-content: center;
+    gap: 7rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    gap: 5rem;
+  }
+}
+
+.headBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.heading1 {
+  max-width: 90rem;
+}
+
+.heading2 {
+  text-transform: uppercase;
+  color: var(--clr-neutral-600);
+}
+@media only screen and (max-width: 75em) {
+  .heading2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .heroImg {
+    display: none;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .heroImg {
+    display: none;
+  }
+}
+
+.line {
+  width: 40rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .line {
+    width: 25rem;
+  }
+}
+
+.setBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .setBox {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: clamp(20rem, 60vw, 30rem);
+  }
+}
+
+.calendarBox,
+.locationBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date,
+.place {
+  font-weight: 300;
+}
+
+.placeIcon {
+  flex-shrink: 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .btnBox {
+    align-self: flex-end;
+  }
+}/*# sourceMappingURL=Hero.module.css.map */

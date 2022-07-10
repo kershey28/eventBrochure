@@ -1,13 +1,316 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
+
+body {
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--clr-neutral-700);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+}
+
+::-moz-selection {
+  background-color: var(--clr-secondary-100);
+}
+
+::selection {
+  background-color: var(--clr-secondary-100);
+}
+
+.container-main {
+  background-image: linear-gradient(to bottom right, var(--clr-secondary-300), var(--clr-tertiary-400));
+}
+
+/*
+$color-primary: #EBECF0
+$color-secondary: #B0DC63
+$color-tertiary: #3e7d6a
+$color-shadow #BABECC #5b8020
+*/
+:root {
+  --clr-primary-100: hsl(228deg, 14.3%, 100%);
+  --clr-primary-200: hsl(228deg, 14.3%, 96.1%);
+  --clr-primary-300: hsl(228deg, 14.3%, 93.1%);
+  --clr-primary-400: hsl(228deg, 14.3%, 90.1%);
+  --clr-primary-500: hsl(228deg, 14.3%, 85.1%);
+  --clr-secondary-100: hsl(81.8deg, 63.4%, 72.5%);
+  --clr-secondary-200: hsl(81.8deg, 63.4%, 67.5%);
+  --clr-secondary-300: hsl(81.8deg, 63.4%, 62.5%);
+  --clr-secondary-400: hsl(81.8deg, 63.4%, 57.5%);
+  --clr-secondary-500: hsl(81.8deg, 63.4%, 52.5%);
+  --clr-shadow-100: hsl(226.7deg, 15%, 86.5%);
+  --clr-shadow-200: hsl(226.7deg, 15%, 81.5%);
+  --clr-shadow-300: hsl(226.7deg, 15%, 76.5%);
+  --clr-shadow-400: hsl(226.7deg, 15%, 71.5%);
+  --clr-shadow-500: hsl(226.7deg, 15%, 66.5%);
+  --clr-ash-100: hsl(0deg, 0%, 91.8%);
+  --clr-ash-200: hsl(40deg, 4.6%, 87.3%);
+  --clr-ash-300: hsl(0deg, 0%, 74.1%);
+  --clr-ash-400: hsl(15deg, 1.9%, 58.8%);
+  --clr-ash-500: hsl(0deg, 0%, 42.4%);
+  --clr-tertiary-100: hsl(161.9deg, 33.7%, 46.7%);
+  --clr-tertiary-200: hsl(161.9deg, 33.7%, 41.7%);
+  --clr-tertiary-300: hsl(161.9deg, 33.7%, 36.7%);
+  --clr-tertiary-400: hsl(161.9deg, 33.7%, 31.7%);
+  --clr-tertiary-500: hsl(161.9deg, 33.7%, 26.7%);
+  --clr-neutral-100: hsl(0deg, 0%, 100%);
+  --clr-neutral-200: hsl(0deg, 0%, 87%);
+  --clr-neutral-300: hsl(0deg, 0%, 80%);
+  --clr-neutral-400: hsl(0deg, 0%, 60%);
+  --clr-neutral-500: hsl(0deg, 0%, 50%);
+  --clr-neutral-600: hsl(0deg, 0%, 40%);
+  --clr-neutral-700: hsl(0deg, 0%, 30%);
+  --clr-neutral-800: hsl(0deg, 0%, 15%);
+  --clr-neutral-900: hsl(0deg, 0%, 0%);
+  --clr-primary-opacity-100: hsla(228deg, 14.3%, 93.1%, 0.1);
+  --clr-primary-opacity-200: hsla(228deg, 14.3%, 93.1%, 0.2);
+  --clr-primary-opacity-300: hsla(228deg, 14.3%, 93.1%, 0.4);
+  --clr-primary-opacity-400: hsla(228deg, 14.3%, 93.1%, 0.6);
+  --clr-primary-opacity-500: hsla(228deg, 14.3%, 93.1%, 0.8);
+  --clr-secondary-opacity-100: hsla(81.8deg, 63.4%, 62.5%, 0.1);
+  --clr-secondary-opacity-200: hsla(81.8deg, 63.4%, 62.5%, 0.2);
+  --clr-secondary-opacity-300: hsla(81.8deg, 63.4%, 62.5%, 0.4);
+  --clr-secondary-opacity-400: hsla(81.8deg, 63.4%, 62.5%, 0.6);
+  --clr-secondary-opacity-500: hsla(81.8deg, 63.4%, 62.5%, 0.8);
+  --clr-shadow-opacity-100: hsla(226.7deg, 15%, 76.5%, 0.1);
+  --clr-shadow-opacity-200: hsla(226.7deg, 15%, 76.5%, 0.2);
+  --clr-shadow-opacity-300: hsla(226.7deg, 15%, 76.5%, 0.4);
+  --clr-shadow-opacity-400: hsla(226.7deg, 15%, 76.5%, 0.6);
+  --clr-shadow-opacity-500: hsla(226.7deg, 15%, 76.5%, 0.8);
+  --clr-ash-opacity-100: hsla(0deg, 0%, 42.4%, 0.1);
+  --clr-ash-opacity-200: hsla(0deg, 0%, 42.4%, 0.2);
+  --clr-ash-opacity-300: hsla(0deg, 0%, 42.4%, 0.4);
+  --clr-ash-opacity-400: hsla(0deg, 0%, 42.4%, 0.6);
+  --clr-ash-opacity-500: hsla(0deg, 0%, 42.4%, 0.8);
+  --clr-tertiary-opacity-100: hsla(161.9deg, 33.7%, 36.7%, 0.1);
+  --clr-tertiary-opacity-200: hsla(161.9deg, 33.7%, 36.7%, 0.2);
+  --clr-tertiary-opacity-300: hsla(161.9deg, 33.7%, 36.7%, 0.4);
+  --clr-tertiary-opacity-400: hsla(161.9deg, 33.7%, 36.7%, 0.6);
+  --clr-tertiary-opacity-500: hsla(161.9deg, 33.7%, 36.7%, 0.8);
+  --clr-white-opacity-100: hsla(0deg, 0%, 100%, 0.2);
+  --clr-white-opacity-200: hsla(0deg, 0%, 100%, 0.4);
+  --clr-white-opacity-300: hsla(0deg, 0%, 100%, 0.6);
+  --clr-white-opacity-400: hsla(0deg, 0%, 100%, 0.8);
+  --clr-white-opacity-500: hsl(0deg, 0%, 100%);
+  --clr-black-opacity-100: hsla(0deg, 0%, 0%, 0.2);
+  --clr-black-opacity-200: hsla(0deg, 0%, 0%, 0.4);
+  --clr-black-opacity-300: hsla(0deg, 0%, 0%, 0.6);
+  --clr-black-opacity-400: hsla(0deg, 0%, 0%, 0.8);
+  --clr-black-opacity-500: hsl(0deg, 0%, 0%);
+}
+
+/* Font Sizes  */
+:root {
+  /* Font Sizes  */
+  --fs-display: 8rem;
+  --fs-heading: 3.6rem;
+  --fs-subheading: 2.4rem;
+  --fs-label: 1.8rem;
+  --fs-body: 1.4rem;
+  --fs-caption: 1rem;
+  /* Font Family */
+  --ff-primary: "Lato", sans-serif;
+  --ff-accent: "Montserrat", sans-serif;
+}
+@media only screen and (max-width: 37.5em) {
+  :root {
+    --fs-display: 4rem;
+    --fs-heading: 3rem;
+    --fs-subheading: 2rem;
+    --fs-label: 1.4rem;
+    --fs-body: 1rem;
+    --fs-caption: 0.8rem;
+  }
+}
+
+.heading-display {
+  font-size: var(--fs-display);
+  color: var(--clr-secondary-500);
+  font-weight: 300;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.heading-1 {
+  font-size: var(--fs-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.5rem;
+}
+
+.heading-2 {
+  font-size: var(--fs-subheading);
+  font-weight: 500;
+}
+
+.heading-3 {
+  font-size: var(--fs-label);
+  letter-spacing: 0.5rem;
+  font-weight: 300;
+}
+
+.caption {
+  font-size: var(--fs-caption);
+}
+
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  80% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  80% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.spinner__dot {
+  background-color: var(--clr-secondary-300);
+}
+.spinner__dot, .spinner__dot:after {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  -webkit-animation: spinner 1.5s calc(((var(--i) + var(--o, 0)) / var(--n) - 1) *1.5s) infinite;
+          animation: spinner 1.5s calc(((var(--i) + var(--o, 0)) / var(--n) - 1) *1.5s) infinite;
+}
+.spinner__dot:after {
+  --o: 1;
+  background-color: var(--clr-neutral-100);
+  content: "";
+}
+
+@-webkit-keyframes spinner {
+  0%, 50% {
+    transform: scale(0);
+  }
+}
+
+@keyframes spinner {
+  0%, 50% {
+    transform: scale(0);
+  }
+}
+.navSticky {
+  position: fixed;
+  background-color: var(--clr-secondary-300);
+}
+
+.navAbsolute {
+  position: absolute;
+  background-color: transparent;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.moveInRight {
+  -webkit-animation: moveInRight 1.5s backwards ease-out 0.5s;
+          animation: moveInRight 1.5s backwards ease-out 0.5s;
+}
+
+.moveInLeft {
+  -webkit-animation: moveInLeft 1.5s backwards ease-out 0.5s;
+          animation: moveInLeft 1.5s backwards ease-out 0.5s;
+}
+
+.moveInBottom {
+  -webkit-animation: moveInBottom 1s backwards ease-out;
+          animation: moveInBottom 1s backwards ease-out;
+}
+
+.moveInBottomIntro {
+  -webkit-animation: moveInBottom 1s backwards ease-out 1s;
+          animation: moveInBottom 1s backwards ease-out 1s;
+}
+
+.textClipIntro {
+  -webkit-animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) backwards;
+          animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) backwards;
+}/*# sourceMappingURL=index.css.map */

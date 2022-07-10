@@ -1,0 +1,97 @@
+@use '../../../styles/abstracts/breakpoints';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  gap: 5rem;
+
+  @include breakpoints.respond(tab-port) {
+    justify-content: center;
+    gap: 7rem;
+  }
+
+  @include breakpoints.respond(phone-reg) {
+    gap: 5rem;
+  }
+}
+
+//children-`
+.headBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.heading1 {
+  max-width: 90rem;
+}
+
+.heading2 {
+  text-transform: uppercase;
+  color: var(--clr-neutral-600);
+
+  @include breakpoints.respond(tab-land) {
+    display: none;
+  }
+}
+
+.heroImg {
+  @include breakpoints.respond(tab-port) {
+    display: none;
+  }
+
+  @include breakpoints.respond(phone-reg) {
+    display: none;
+  }
+}
+
+.line {
+  width: 40rem;
+  @include breakpoints.respond(phone-reg) {
+    width: 25rem;
+  }
+}
+
+//children-2
+.setBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoints.respond(tab-port) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: clamp(20rem, 60vw, 30rem);
+  }
+}
+
+.calendarBox,
+.locationBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date,
+.place {
+  font-weight: 300;
+}
+
+.placeIcon {
+  flex-shrink: 0;
+}
+
+//children-2
+.btnBox {
+  @include breakpoints.respond(phone-reg) {
+    align-self: flex-end;
+  }
+}

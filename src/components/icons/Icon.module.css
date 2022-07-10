@@ -1,0 +1,23 @@
+.iconNeutral {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--clr-neutral-500);
+}
+@media only screen and (max-width: 37.5em) {
+  .iconNeutral {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+.iconSecondary {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--clr-secondary-500);
+}
+@media only screen and (max-width: 37.5em) {
+  .iconSecondary {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}/*# sourceMappingURL=Icon.module.css.map */

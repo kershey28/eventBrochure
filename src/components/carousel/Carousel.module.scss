@@ -1,0 +1,236 @@
+@use '../../styles/abstracts/breakpoints';
+@use '../../styles/abstracts/variables';
+@use '../../styles/utilities/flow';
+
+$slide-count: 8;
+$slide-width: 30rem;
+$slide-width-phone: 25rem;
+
+.wrap {
+  //layout
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  //position
+  position: relative;
+  width: 100%;
+  left: 50%;
+  margin-block: flow.$margin-lg;
+  transform: translateX(-50%);
+}
+
+.inner {
+  height: 40rem;
+  position: relative;
+  width: calc(#{$slide-width * 3});
+
+  @include breakpoints.respond(phone-reg) {
+    width: calc(#{$slide-width-phone * 3});
+  }
+}
+
+.container {
+  //sizing
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  //position
+  position: relative;
+  transition: all 0.5s;
+}
+
+.list {
+  //position
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+
+  //sizing
+  height: 100%;
+  width: calc(#{($slide-count + 0.5) * $slide-width * 2});
+  @include breakpoints.respond(phone-reg) {
+    width: calc(#{($slide-count + 0.5) * $slide-width-phone * 2});
+  }
+}
+
+.item {
+  //position
+  display: inline-block;
+  position: absolute;
+
+  //others
+  padding: 1rem;
+  transition: all 0.3s;
+
+  //sizing
+  height: $slide-width;
+  width: $slide-width;
+
+  @include breakpoints.respond(phone-reg) {
+    height: $slide-width-phone;
+    width: $slide-width-phone;
+  }
+}
+
+.imgLink {
+  //position
+  position: relative;
+  display: flex;
+  cursor: zoom-in;
+
+  //sizing
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+  }
+
+  &::after {
+    //layout
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    //styling
+    background-color: var(--clr-black-opacity-300);
+    color: var(--clr-neutral-100);
+
+    //sizing
+    height: 100%;
+    width: 100%;
+
+    //appearance
+    content: 'read more';
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+
+    img {
+      transform: scale(1.3);
+    }
+  }
+}
+
+.body {
+  bottom: -2.5rem;
+  height: 10%;
+  position: absolute;
+
+  h4 {
+    margin: 0.7rem 0 0;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: var(--clr-neutral-500);
+    margin: 0.7rem 0 0;
+  }
+}
+
+.dots {
+  //position
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: flow.$margin-sm;
+
+  .dot {
+    //sizing
+    height: 2rem;
+    width: 2rem;
+
+    //styling
+    background-color: var(--clr-neutral-300);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+
+    //spacing
+    margin: 0 0.3rem;
+    outline: none;
+    transform: scale(0.5);
+
+    &.active {
+      background: var(--clr-secondary-300);
+    }
+  }
+}
+
+.btn {
+  //layout
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  //appearance
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  //position
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+
+  @include breakpoints.respond(phone-reg) {
+    display: none;
+  }
+}
+
+.btnPrev {
+  left: -5rem;
+  margin-left: 1rem;
+}
+
+.btnNext {
+  right: -5rem;
+  margin-right: 1rem;
+}
+
+.btnArrow {
+  //sizing
+  height: 3rem;
+  width: 3rem;
+  padding: 3px;
+
+  //styling
+  border: solid var(--clr-neutral-300);
+  border-width: 0 0.4rem 0.4rem 0;
+  z-index: 10;
+
+  &:hover,
+  &:focus {
+    border-color: var(--clr-secondary-300);
+    outline: none;
+  }
+
+  &:active {
+    border-color: var(--clr-neutral-100);
+  }
+}
+
+.btnArrowLeft {
+  transform: rotate(135deg);
+}
+
+.btnArrowRight {
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,184 @@
+.btnCTA {
+  padding: 1.5rem 3rem;
+  background-color: var(--clr-secondary-300);
+  color: var(--clr-neutral-100);
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px var(--clr-shadow-300);
+  -webkit-animation: buttonCta 2s backwards ease-out;
+          animation: buttonCta 2s backwards ease-out;
+}
+.btnCTA {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: var(--fs-label);
+  text-shadow: 1px 1px 0 #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  border-radius: 15px;
+  border: none;
+  transition: all 0.2s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+.btnCTA:focus {
+  outline: none;
+}
+.btnCTA:hover, .btnCTA:focus {
+  background-color: var(--clr-secondary-500);
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px var(--clr-shadow-300);
+}
+.btnCTA:active {
+  box-shadow: inset 1px 1px 2px var(--clr-shadow-300), inset -1px -1px 2px #fff;
+}
+
+.btnGhost {
+  padding: 1.5rem 3rem;
+  color: var(--clr-secondary-300);
+  box-shadow: inset 1px 1px 2px var(--clr-shadow-300), inset -1px -1px 2px #fff;
+  -webkit-animation: buttonGhost 2s backwards ease-out;
+          animation: buttonGhost 2s backwards ease-out;
+}
+.btnGhost {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: var(--fs-label);
+  text-shadow: 1px 1px 0 #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  border-radius: 15px;
+  border: none;
+  transition: all 0.2s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+.btnGhost:focus {
+  outline: none;
+}
+.btnGhost:hover, .btnGhost:focus {
+  box-shadow: inset 2px 2px 5px var(--clr-shadow-300), inset -5px -5px 10px #fff;
+}
+.btnGhost:active {
+  box-shadow: inset 4px 4px 13px var(--clr-shadow-300), inset -13px -13px 26px #fff;
+}
+
+.btnText {
+  background: none;
+  padding: 3px;
+  color: var(--clr-ash-500);
+  border-bottom: 1px solid var(--clr-shadow-300);
+}
+.btnText {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: var(--fs-label);
+  text-shadow: 1px 1px 0 #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  border-radius: 15px;
+  border: none;
+  transition: all 0.2s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+.btnText:focus {
+  outline: none;
+}
+.btnText:hover, .btnText:focus {
+  transform: translateY(-2px);
+}
+.btnText:active {
+  transform: translateY(2px);
+}
+
+@-webkit-keyframes buttonCta {
+  0% {
+    box-shadow: none;
+    color: var(--clr-secondary-300);
+  }
+  70% {
+    box-shadow: none;
+  }
+  80% {
+    box-shadow: none;
+    color: var(--clr-secondary-300);
+  }
+  100% {
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px var(--clr-shadow-300);
+    color: var(--clr-neutral-100);
+  }
+}
+
+@keyframes buttonCta {
+  0% {
+    box-shadow: none;
+    color: var(--clr-secondary-300);
+  }
+  70% {
+    box-shadow: none;
+  }
+  80% {
+    box-shadow: none;
+    color: var(--clr-secondary-300);
+  }
+  100% {
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px var(--clr-shadow-300);
+    color: var(--clr-neutral-100);
+  }
+}
+@-webkit-keyframes buttonGhost {
+  0% {
+    box-shadow: none;
+    color: var(--clr-shadow-300);
+  }
+  70% {
+    box-shadow: none;
+  }
+  80% {
+    box-shadow: none;
+    color: var(--clr-shadow-300);
+  }
+  100% {
+    box-shadow: inset 1px 1px 2px var(--clr-shadow-300), inset -1px -1px 2px #fff;
+    color: var(--clr-secondary-300);
+  }
+}
+@keyframes buttonGhost {
+  0% {
+    box-shadow: none;
+    color: var(--clr-shadow-300);
+  }
+  70% {
+    box-shadow: none;
+  }
+  80% {
+    box-shadow: none;
+    color: var(--clr-shadow-300);
+  }
+  100% {
+    box-shadow: inset 1px 1px 2px var(--clr-shadow-300), inset -1px -1px 2px #fff;
+    color: var(--clr-secondary-300);
+  }
+}/*# sourceMappingURL=Button.module.css.map */

@@ -1,0 +1,8 @@
+@use '../../styles/abstracts/variables';
+@use '../../styles/utilities/flow';
+
+.container {
+  box-shadow: variables.$shadow-nuemorphic-bump-2;
+  padding: flow.$padding-mn flow.$padding-sm;
+  border-radius: 10px;
+}

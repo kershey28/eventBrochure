@@ -1,0 +1,35 @@
+//navigation
+.navSticky {
+  position: fixed;
+  background-color: var(--clr-secondary-300);
+}
+
+.navAbsolute {
+  position: absolute;
+  background-color: transparent;
+}
+
+//animation
+.hidden {
+  opacity: 0;
+}
+
+.moveInRight {
+  animation: moveInRight 1.5s backwards ease-out 0.5s;
+}
+
+.moveInLeft {
+  animation: moveInLeft 1.5s backwards ease-out 0.5s;
+}
+
+.moveInBottom {
+  animation: moveInBottom 1s backwards ease-out;
+}
+
+.moveInBottomIntro {
+  animation: moveInBottom 1s backwards ease-out 1s;
+}
+
+.textClipIntro {
+  animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) backwards;
+}

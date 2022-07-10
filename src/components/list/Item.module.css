@@ -1,0 +1,25 @@
+.container {
+  list-style: none;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px var(--clr-shadow-300);
+  padding: 1.5rem 3rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.listNumber {
+  padding: 1.5rem;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: inset 4px 4px 13px var(--clr-shadow-300), inset -13px -13px 26px #fff;
+  color: var(--clr-secondary-500);
+}
+
+.listText {
+  font-size: var(--fs-label);
+  color: var(--clr-neutral-600);
+}/*# sourceMappingURL=Item.module.css.map */

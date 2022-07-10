@@ -1,0 +1,24 @@
+.headingBox {
+  margin-block: 5rem 10rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headingText {
+  color: var(--clr-neutral-500);
+  display: inline;
+  margin-left: 1.5rem;
+}
+
+.cards {
+  margin-block: 8rem;
+}
+
+.iconPlus {
+  width: 4rem;
+  height: 4rem;
+}/*# sourceMappingURL=Events.module.css.map */

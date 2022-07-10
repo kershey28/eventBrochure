@@ -1,0 +1,35 @@
+@use '../../../styles/abstracts/breakpoints';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8rem;
+}
+
+.scanBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  text-align: center;
+  max-width: 30rem;
+}
+
+.logoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  @include breakpoints.respond(phone-reg) {
+    flex-direction: column;
+  }
+}
+
+.logoImg {
+  width: 15rem;
+}

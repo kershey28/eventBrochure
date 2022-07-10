@@ -1,0 +1,26 @@
+@use '../../styles/utilities/flow';
+
+.headingBox {
+  margin-block: flow.$margin-md flow.$margin-xl;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headingText {
+  color: var(--clr-neutral-500);
+  display: inline;
+  margin-left: flow.$margin-sm;
+}
+
+.cards {
+  margin-block: flow.$margin-lg;
+}
+
+.iconPlus {
+  width: 4rem;
+  height: 4rem;
+}
