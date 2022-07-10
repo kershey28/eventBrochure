@@ -40,6 +40,7 @@
 
 .btnGhost {
   padding: 1.5rem 3rem;
+  background-color: transparent;
   color: var(--clr-secondary-300);
   box-shadow: inset 1px 1px 2px var(--clr-shadow-300), inset -1px -1px 2px #fff;
   -webkit-animation: buttonGhost 2s backwards ease-out;

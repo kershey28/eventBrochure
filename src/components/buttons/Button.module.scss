@@ -52,6 +52,7 @@
 
   @if $type == ghost {
     padding: 1.5rem 3rem;
+    background-color: transparent;
     color: var(--clr-secondary-300);
     box-shadow: variables.$shadow-nuemorphic-pressed-1;
     animation: buttonGhost 2s backwards ease-out;
